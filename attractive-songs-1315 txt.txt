@@ -1,0 +1,56 @@
+create database attractive-songs-1315;
+
+use attractive-songs-1315;
+
+Creating Tables:
+----------------
+
+//Admin:
+create table Admin
+(
+username varchar(12) primary key,
+password varchar(16) not null
+);
+
+//Faculty:
+create table Faculty
+(
+facultyid int primary key,
+facultyname varchar(12),
+facultyaddress varchar(20),
+mobile int,
+email varchar(16),
+username varchar(12),
+password varchar(16) not null
+);
+
+//Course:
+create table Course
+(
+courseId int primary key,
+courseName varchar(12),
+fee int,
+courseDescription varchar(20)
+):
+
+//Batch:
+create table Batch
+(
+batchId int primary key,
+courseId int,
+facultyId int,
+numberofStudents int,
+batchstartDate date,
+duration int
+);
+
+//CoursPlan:
+create table CoursPlan
+(
+planId int primary key,
+batchId int,
+daynumber int,
+topic varchar(12),
+status boolean
+);
+
